@@ -388,10 +388,14 @@ export default function StructurePage() {
         </div>
 
         <div className="mb-8 animate-fade-up-delay-2">
+          <p className="text-muted-foreground leading-relaxed font-english mb-4">
+            Indian literature is incredibly vast and deep. There are many scriptures and texts that exist today which we barely understand, and many others that have been lost over time. Because of this scale and complexity, approaching Sanskrit literature without structure can feel overwhelming.
+          </p>
+          <p className="text-muted-foreground leading-relaxed font-english mb-4">
+            Here, I am trying to organize the Sanskrit texts that are currently available and present them in a tree-like structure. This structure spans a wide range of works from philosophical and spiritual texts to religious and knowledge-based literature.
+          </p>
           <p className="text-muted-foreground leading-relaxed font-english">
-            Sanskrit literature is organized into distinct categories, each serving specific purposes.
-            This tree structure shows the traditional classification of texts, from the foundational
-            Vedic literature to classical poetry, philosophy, and sciences.
+            The texts that are highlighted in this structure are the ones I have added so far, and they are available for you to read. My long-term goal is to gradually identify, collect, and add more works from this structure to the website. Until then, this overview can also serve as a guide for those who wish to explore and learn more about these texts on their own.
           </p>
         </div>
 
@@ -410,7 +414,7 @@ export default function StructurePage() {
         <div className="mt-8 animate-fade-up-delay-4">
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-english">
             <div className="flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full" style={{ backgroundColor: '#B85OE2' }}></div>
+              <div className="h-3 w-3 rounded-full bg-orange-500"></div>
               <span className="text-muted-foreground">Available</span>
             </div>
             <div className="flex items-center gap-2">

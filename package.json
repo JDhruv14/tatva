@@ -1,7 +1,7 @@
 {
-  "name": "tattva",
+  "name": "tatva",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.4.3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

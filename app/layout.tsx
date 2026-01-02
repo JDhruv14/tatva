@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Explore the timeless wisdom of ancient India through our digital museum. Read Rigveda, Mahabharata, Ramayana, Bhagavad Gita, and more sacred texts.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/web_home.jpg",
         width: 1200,
         height: 630,
         alt: "तत्त्व (Tatva) - Ancient Indian Scriptures",
@@ -75,13 +75,14 @@ export const metadata: Metadata = {
     title: "तत्त्व (Tatva) - Digital Museum of Ancient Indian Scriptures",
     description:
       "Explore the timeless wisdom of ancient India through our digital museum. Read Rigveda, Mahabharata, Ramayana, Bhagavad Gita, and more.",
-    images: ["/og-image.png"],
+    images: ["/web_home.jpg"],
   },
   alternates: {
     canonical: "https://tatva.info",
     languages: {
       "en-IN": "https://tatva.info",
       "hi-IN": "https://tatva.info",
+      "sa-IN": "https://tatva.info",
     },
   },
   category: "Education",

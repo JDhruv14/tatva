@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | तत्त्व (Tatva)",
   },
   description:
-    "Explore the timeless wisdom of ancient India through our digital museum. Read Rigveda, Mahabharata, Ramayana, Bhagavad Gita, and more sacred texts in a beautiful, modern interface.",
+    "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected",
   keywords: [
     "Vedas",
     "Rigveda",
@@ -170,3 +170,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -96,10 +96,10 @@ export default function HomePage() {
         </p>
 
         {/* Pill Button - Same color as tatva */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-10 animate-fade-up-delay-2">
           <Link
             href="/contents"
-            className="btn-tatva inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-full text-white mt-2 animate-fade-up-delay-2"
+            className="btn-tatva inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-full text-white dark:text-black mt-2 transition-transform hover:scale-105"
           >
             <span className="font-english">Start Reading</span>
           </Link>

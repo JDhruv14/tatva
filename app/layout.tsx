@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: "तत्त्व (Tatva)",
     title: "तत्त्व (Tatva) - Digital Museum of Ancient Indian Scriptures",
     description:
-      "Explore the timeless wisdom of ancient India through our digital museum. Read Rigveda, Mahabharata, Ramayana, Bhagavad Gita, and more sacred texts.",
+      "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected",
     images: [
       {
         url: "/web_home.jpg",
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     creator: "@dhruvtwt_",
     title: "तत्त्व (Tatva) - Digital Museum of Ancient Indian Scriptures",
     description:
-      "Explore the timeless wisdom of ancient India through our digital museum. Read Rigveda, Mahabharata, Ramayana, Bhagavad Gita, and more.",
+      "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected.",
     images: ["/web_home.jpg"],
   },
   alternates: {
@@ -170,4 +170,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

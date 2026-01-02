@@ -11,7 +11,9 @@ const MAX_REQUESTS = 100; // 100 requests per minute
 
 // Next.js 16+ convention: 'proxy' instead of 'middleware'
 export function proxy(request: NextRequest) {
-    const ip = request.ip || "127.0.0.1";
+    // In Next.js 16 (or specific environments), .ip might not be on the type definition or undefined.
+    // Fallback to headers.
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0] || "127.0.0.1";
 
     // Clean up old entries periodically (optimization)
     const now = Date.now();

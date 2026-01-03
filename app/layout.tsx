@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     title: "तत्त्व (Tatva) - Digital Museum of Ancient Indian Scriptures",
     description:
       "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected.",
-    images: ["/web_home.jpg"],
+    images: ["/web_home.png"],
   },
   alternates: {
     canonical: "https://tatva.info",
@@ -170,6 +170,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

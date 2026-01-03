@@ -57,8 +57,8 @@ const features = [
   },
   {
     Icon: Globe,
-    name: "Free & Open",
-    description: "Completely free access to ancient wisdom, available worldwide.",
+    name: "Free",
+    description: "Completely free access to ancient Indian wisdom, available all at one place.",
     href: "/preface",
     cta: "Learn More",
     className: "col-span-3 lg:col-span-2",

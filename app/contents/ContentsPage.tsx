@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const rigvedaMandalas = [
   { id: 1, hindi: "मण्डल १", english: "Mandala 1", description: "Various sages, including Madhucchanda, Gotama, and Medhatithi.", shlokaLink: "rv-1-1-1" },
@@ -98,6 +99,7 @@ const books = [
     placeholderLink: "/rigveda",
     sections: rigvedaMandalas,
     imageGradient: "from-amber-900 via-orange-800 to-amber-700",
+    imageSrc: "/rigveda.png",
   },
   {
     id: "ramayana",
@@ -107,6 +109,7 @@ const books = [
     placeholderLink: "/ramayana",
     sections: ramayanaKandas,
     imageGradient: "from-blue-900 via-indigo-800 to-blue-700",
+    imageSrc: "/ramayana.png",
   },
   {
     id: "mahabharata",
@@ -116,6 +119,7 @@ const books = [
     placeholderLink: "/mahabharata",
     sections: mahabharataParvas,
     imageGradient: "from-purple-900 via-violet-800 to-purple-700",
+    imageSrc: "/mahabharata.png",
   },
   {
     id: "bhagavad-gita",
@@ -125,6 +129,7 @@ const books = [
     placeholderLink: "/bhagavad-gita",
     sections: bhagavadGitaChapters,
     imageGradient: "from-rose-900 via-pink-800 to-rose-700",
+    imageSrc: "/gita.png",
   },
   {
     id: "srimad-bhagavatam",
@@ -134,6 +139,7 @@ const books = [
     placeholderLink: "/srimad-bhagavatam",
     sections: srimadBhagavatamSkandas,
     imageGradient: "from-emerald-900 via-teal-800 to-emerald-700",
+    imageSrc: "/srimad%20bhagvatam.png",
   },
   {
     id: "manu-smriti",
@@ -143,6 +149,7 @@ const books = [
     placeholderLink: "/manu-smriti",
     sections: [],
     imageGradient: "from-stone-900 via-neutral-800 to-stone-700",
+    imageSrc: "/manu%20smriti.png",
   },
   {
     id: "yoga-vasishtha",
@@ -152,6 +159,7 @@ const books = [
     placeholderLink: "/yoga-vasishtha",
     sections: yogaVasishthaPrakaranas,
     imageGradient: "from-cyan-900 via-blue-800 to-cyan-700",
+    imageSrc: "/yoga%20vasistha.png",
   },
   {
     id: "markandeya-puran",
@@ -161,6 +169,7 @@ const books = [
     placeholderLink: "/markandeya-purana",
     sections: [],
     imageGradient: "from-violet-900 via-purple-800 to-violet-700",
+    imageSrc: "/markandaye%20puran.png",
   },
   {
     id: "parashara-hora-shastra",
@@ -170,6 +179,7 @@ const books = [
     placeholderLink: "/parashara",
     sections: [],
     imageGradient: "from-indigo-900 via-blue-800 to-indigo-700",
+    imageSrc: "/parahar%20sastra.png",
   },
   {
     id: "ramopakyana",
@@ -179,6 +189,7 @@ const books = [
     placeholderLink: "/ramopakyana",
     sections: [],
     imageGradient: "from-sky-900 via-cyan-800 to-sky-700",
+    imageSrc: "/Rāmopākhyāna.png",
   },
   {
     id: "devi-mahatmyam",
@@ -188,6 +199,7 @@ const books = [
     placeholderLink: "/devi-mahatmyam",
     sections: [],
     imageGradient: "from-fuchsia-900 via-pink-800 to-fuchsia-700",
+    imageSrc: "/devi.png",
   },
 ];
 
@@ -314,122 +326,26 @@ export default function ContentsPage() {
                 <Link key={book.id} href={book.placeholderLink} className="block group h-full">
                   <Card className="overflow-hidden h-full flex flex-col hover:border-primary/50 hover:shadow-lg transition-all duration-300 border-border/50">
                     {/* Image Section */}
-                    {book.id === "mahabharata" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/mahabharata.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "ramayana" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/ramayana.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "rigveda" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/rigveda.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "yoga-vasishtha" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/yoga%20vasistha.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "markandeya-puran" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/markandaye%20puran.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "devi-mahatmyam" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/devi.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "bhagavad-gita" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/gita.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "manu-smriti" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/manu%20smriti.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "parashara-hora-shastra" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/parahar%20sastra.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "ramopakyana" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/Rāmopākhyāna.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : book.id === "srimad-bhagavatam" ? (
-                      <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
-                          src="/srimad%20bhagvatam.png"
-                          alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
-                      </div>
-                    ) : (
-                      <div className={`h-48 bg-gradient-to-br ${book.imageGradient} relative overflow-hidden flex-shrink-0`}>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
-                      </div>
-                    )}
+                    <div className="h-48 relative overflow-hidden flex-shrink-0">
+                      {book.imageSrc ? (
+                        <>
+                          <Image
+                            src={book.imageSrc}
+                            alt={book.english}
+                            fill
+                            className="object-cover brightness-110"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+                          <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
+                        </>
+                      ) : (
+                        <div className={`h-48 bg-gradient-to-br ${book.imageGradient} relative overflow-hidden flex-shrink-0`}>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors" />
+                        </div>
+                      )}
+                    </div>
                     {/* Content Section */}
                     <CardContent className="p-6 bg-card flex-1 flex flex-col">
                       <h2 className="text-2xl font-sanskrit text-foreground mb-2 group-hover:text-primary transition-colors">

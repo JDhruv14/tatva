@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected",
     images: [
       {
-        url: "/web_home.jpg",
+        url: "/web_home.png",
         width: 1200,
         height: 630,
         alt: "तत्त्व (Tatva) - Ancient Indian Scriptures",
@@ -170,5 +170,6 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 

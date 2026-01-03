@@ -61,7 +61,7 @@ export const metadata: Metadata = {
       "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected",
     images: [
       {
-        url: "/og_home.png",
+        url: "https://tatva.info/og_home.png",
         width: 1200,
         height: 630,
         alt: "तत्त्व (Tatva) - Ancient Indian Scriptures",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     title: "तत्त्व (Tatva) - Digital Museum of Ancient Indian Scriptures",
     description:
       "Discover ancient Indian texts through a modern digital library designed to make reading, exploration, and understanding more approachable and interconnected.",
-    images: ["/og_home.png"],
+    images: ["https://tatva.info/og_home.png"],
   },
   alternates: {
     canonical: "https://tatva.info",
@@ -170,6 +170,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

@@ -84,6 +84,23 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Product Hunt Badge */}
+        <div className="flex justify-center mb-8 animate-fade-up-delay-1">
+          <a
+            href="https://www.producthunt.com/products/tatva?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tatva"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1057962&theme=light&t=1767501733397"
+              alt="Tatva - A digital museum for ancient Indian texts | Product Hunt"
+              width="180"
+              height="40"
+              className="w-[180px] h-[40px]"
+            />
+          </a>
+        </div>
+
         {/* Title */}
         <h1 className="text-4xl md:text-6xl text-center font-medium mb-10 animate-fade-up-delay-1 tracking-tight">
           <span className="text-foreground font-english">From knowledge to<br /> understanding the</span>
@@ -104,6 +121,8 @@ export default function HomePage() {
             <span className="font-english">Start Reading</span>
           </Link>
         </div>
+
+
 
         {/* Hero Image */}
         <div className="flex justify-center mb-16 animate-fade-up-delay-3">

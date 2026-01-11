@@ -32,19 +32,19 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: ["Googlebot", "Googlebot-Image", "Googlebot-News", "Googlebot-Video", "GoogleOther", "Google-InspectionTool", "Storebot-Google"],
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: ["/api/", "/_next/data"],
       },
       // Allow Bing and Microsoft crawlers
       {
         userAgent: ["Bingbot", "BingPreview", "msnbot"],
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: ["/api/", "/_next/data"],
       },
       // Allow other legitimate search engines
       {
         userAgent: ["DuckDuckBot", "Slurp", "Baiduspider", "YandexBot", "Applebot"],
         allow: "/",
-        disallow: ["/api/", "/_next/"],
+        disallow: ["/api/", "/_next/data"],
       },
       // Allow social media preview bots
       {
@@ -55,7 +55,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/", "/private/"],
+        disallow: ["/api/", "/_next/data", "/private/"],
         crawlDelay: 10,
       },
     ],
@@ -63,3 +63,4 @@ export default function robots(): MetadataRoute.Robots {
     host: baseUrl,
   };
 }
+

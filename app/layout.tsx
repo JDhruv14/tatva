@@ -90,15 +90,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/logo.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
-  other: {
-    "google-site-verification": "your-google-verification-code",
-  },
 };
 
 export const viewport: Viewport = {
@@ -130,7 +125,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Martel:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
-        {/* Structured Data for Organization */}
+        {/* Structured Data for WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -138,26 +133,67 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "तत्त्व (Tatva)",
-              alternateName: "Tatva",
+              alternateName: ["Tatva", "Tatva Digital Library"],
               url: "https://tatva.info",
               description:
                 "Digital museum of ancient Indian scriptures including Vedas, Upanishads, Puranas, and Epics.",
+              inLanguage: ["en", "hi", "sa"],
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
                   "@type": "EntryPoint",
-                  urlTemplate: "https://tatva.info/search?q={search_term_string}",
+                  urlTemplate: "https://tatva.info/contents?q={search_term_string}",
                 },
                 "query-input": "required name=search_term_string",
               },
-              publisher: {
-                "@type": "Organization",
-                name: "Tatva",
-                logo: {
-                  "@type": "ImageObject",
-                  url: "https://tatva.info/logo.png",
-                },
+            }),
+          }}
+        />
+        {/* Structured Data for Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Tatva",
+              alternateName: "तत्त्व",
+              url: "https://tatva.info",
+              logo: "https://tatva.info/logo.png",
+              sameAs: [
+                "https://x.com/dhruvtwt_",
+                "https://github.com/JDhruv14/tatva",
+                "https://www.linkedin.com/in/jdhruv14",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                url: "https://tatva.info/preface",
               },
+            }),
+          }}
+        />
+        {/* Structured Data for DigitalDocument Collection */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              name: "Ancient Indian Scripture Collection",
+              description: "A comprehensive digital collection of ancient Indian scriptures including Rigveda, Ramayana, Mahabharata, Bhagavad Gita, and more.",
+              url: "https://tatva.info/contents",
+              isPartOf: {
+                "@type": "WebSite",
+                name: "Tatva",
+                url: "https://tatva.info",
+              },
+              about: {
+                "@type": "Thing",
+                name: "Hindu Scriptures",
+                description: "Sacred texts of Hinduism and Sanatan Dharma",
+              },
+              keywords: "Vedas, Rigveda, Mahabharata, Ramayana, Bhagavad Gita, Sanskrit, Hindu Scriptures, Sanatan Dharma",
             }),
           }}
         />

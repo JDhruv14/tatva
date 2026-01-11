@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft } from "lucide-react";
@@ -113,7 +114,7 @@ export default function YogaVasishthaPage() {
         </div>
         <section className="mb-16 animate-fade-up-delay-2">
           <div className="flex flex-col items-center gap-4">
-            <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg"><img src="/yoga%20vasistha.png" alt="Yoga Vasishtha" className="w-full h-auto object-cover" /></div>
+            <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg"><Image src="/yoga%20vasistha.png" alt="Yoga Vasishtha" width={512} height={512} className="w-full h-auto object-cover" priority /></div>
             <Link href="/shlokas/yv-1-1-1" className="btn-primary inline-block font-english text-sm px-6 py-2">Begin Journey</Link>
           </div>
         </section>

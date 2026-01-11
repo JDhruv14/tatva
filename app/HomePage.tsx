@@ -84,22 +84,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Product Hunt Badge */}
-        <div className="flex justify-center mb-8 animate-fade-up-delay-1">
-          <a
-            href="https://www.producthunt.com/products/tatva?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-tatva"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1057962&theme=light&t=1767501733397"
-              alt="Tatva - A digital museum for ancient Indian texts | Product Hunt"
-              width="180"
-              height="40"
-              className="w-[180px] h-[40px]"
-            />
-          </a>
-        </div>
+
 
         {/* Title */}
         <h1 className="text-4xl md:text-6xl text-center font-medium mb-10 animate-fade-up-delay-1 tracking-tight">
@@ -109,7 +94,7 @@ export default function HomePage() {
 
         {/* Subtitle */}
         <p className="text-center text-muted-foreground text-base md:text-xl max-w-xl mx-auto mb-8 animate-fade-up-delay-2 font-english">
-          Dedicated to preserving and connecting ancient <br />Indian culture rooted in सनातन धर्म
+          Dedicated to preserving and connecting ancient <br />Indian culture rooted in <span className="text-gradient-accent font-sanskrit font-semibold">सनातन धर्म</span>
         </p>
 
         {/* Pill Button - Same color as tatva */}
@@ -160,11 +145,11 @@ export default function HomePage() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 gap-8 max-w-sm mx-auto mb-16 animate-fade-up-delay-4">
-          <Link href="/contents" className="text-center group">
+          <Link href="/" className="text-center group">
             <span className="block text-3xl font-medium text-foreground group-hover:text-primary transition-colors font-english">10+</span>
             <span className="text-sm text-muted-foreground font-english">Books</span>
           </Link>
-          <Link href="/shlokas/rv-2-1-1" className="text-center group">
+          <Link href="/" className="text-center group">
             <span className="block text-3xl font-medium text-foreground group-hover:text-primary transition-colors font-english">150K+</span>
             <span className="text-sm text-muted-foreground font-english">Shlokas</span>
           </Link>

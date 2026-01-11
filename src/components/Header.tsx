@@ -2,6 +2,7 @@
 
 import { Search, CornerDownLeft, Menu, X, FileText, BookOpen, File, ArrowUpDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -41,6 +42,8 @@ const Header = ({ showSearch = true }: HeaderProps) => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const isActive = (path: string) => pathname === path;
 
@@ -267,16 +270,45 @@ const Header = ({ showSearch = true }: HeaderProps) => {
     };
   }, []);
 
+  // Scroll detection for header visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show header when scrolling up or at top
+      if (currentScrollY < lastScrollY || currentScrollY < 50) {
+        setHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Hide header when scrolling down and past threshold
+        setHeaderVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 w-full py-4 px-4">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full py-4 px-4 ${headerVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        style={{
+          transition: headerVisible
+            ? 'transform 350ms cubic-bezier(0.16, 1, 0.3, 1)'
+            : 'transform 250ms cubic-bezier(0.4, 0, 0.2, 1)'
+        }}
+      >
         <div className="max-w-4xl mx-auto flex h-14 items-center justify-between px-4 rounded-full bg-background/40 backdrop-blur-xl backdrop-saturate-150 border border-white/10 dark:border-white/5 shadow-lg shadow-black/5 dark:shadow-black/20 ring-1 ring-black/5 dark:ring-white/10">
           {/* Left: Logo with favicon */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img
+            <Image
               src="/favicon.ico"
               alt="Tatva"
-              className="h-8 w-8 object-contain cursor-pointer"
+              width={32}
+              height={32}
+              className="object-contain cursor-pointer"
             />
             <span className="text-base font-bold text-foreground md:text-2xl font-sanskrit">तत्त्व</span>
           </Link>

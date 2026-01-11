@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, BookOpen, Swords, Heart, Crown, Shield, Sparkles } from "lucide-react";
@@ -46,7 +47,10 @@ const chartConfig = {
   RETURN: { label: "Return", color: "#fbbf24" },
 } satisfies ChartConfig;
 
-const sectionColors = ["hsl(35, 85%, 45%)", "hsl(140, 60%, 40%)", "hsl(0, 70%, 50%)", "hsl(270, 60%, 55%)", "hsl(210, 70%, 50%)", "hsl(45, 90%, 50%)"];
+const sectionColors = [
+  "hsl(15, 75%, 32%)", "hsl(20, 70%, 52%)", "hsl(25, 55%, 42%)",
+  "hsl(30, 80%, 48%)", "hsl(35, 85%, 58%)", "hsl(18, 60%, 38%)"
+];
 
 const pieChartConfig: ChartConfig = {
   verses: { label: "Verses" },
@@ -106,7 +110,7 @@ export default function RamopakyanaPage() {
         </div>
         <section className="mb-16 animate-fade-up-delay-2">
           <div className="flex flex-col items-center gap-4">
-            <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg"><img src="/Rāmopākhyāna.png" alt="Ramopakyana" className="w-full h-auto object-cover" /></div>
+            <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg"><Image src="/Rāmopākhyāna.png" alt="Ramopakyana" width={512} height={512} className="w-full h-auto object-cover" priority /></div>
             <Link href="/shlokas/ro-1-1-1" className="btn-primary inline-block font-english text-sm px-6 py-2">Begin Journey</Link>
           </div>
         </section>

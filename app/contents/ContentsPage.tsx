@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { List, Grid, ArrowLeft, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -316,110 +317,121 @@ export default function ContentsPage() {
                     {/* Image Section */}
                     {book.id === "mahabharata" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/mahabharata.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "ramayana" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/ramayana.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "rigveda" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/rigveda.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "yoga-vasishtha" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/yoga%20vasistha.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "markandeya-puran" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/markandaye%20puran.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "devi-mahatmyam" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/devi.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "bhagavad-gita" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/gita.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "manu-smriti" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/manu%20smriti.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "parashara-hora-shastra" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/parahar%20sastra.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "ramopakyana" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/Rāmopākhyāna.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />
                       </div>
                     ) : book.id === "srimad-bhagavatam" ? (
                       <div className="h-48 relative overflow-hidden flex-shrink-0">
-                        <img
+                        <Image
                           src="/srimad%20bhagvatam.png"
                           alt={book.english}
-                          className="w-full h-full object-cover brightness-110"
+                          fill
+                          className="object-cover brightness-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                         <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors" />

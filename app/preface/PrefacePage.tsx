@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ExternalLink, Coffee } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -69,7 +70,7 @@ export default function PrefacePage() {
           <section className="mb-12">
             <h2 className="text-xl font-medium text-foreground mb-4">Why this logo?</h2>
             <div className="flex justify-center my-8">
-              <img src="/favicon.ico" alt="Tatva Logo" className="w-16 h-16 opacity-90" />
+              <Image src="/favicon.ico" alt="Tatva Logo" width={64} height={64} className="opacity-90" />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               From the beginning, I wanted a symbol that truly aligned with the nature of this project: <strong>timeless, and spiritual</strong>. I spent nearly half a day researching and experimenting, trying to translate an idea that existed only in my mind. I tested multiple prompts with tools like Gemini and ChatGPT, and went through multiple iterations.
@@ -139,10 +140,12 @@ export default function PrefacePage() {
           <section className="mb-12">
             <h2 className="text-xl font-medium text-foreground mb-4">About the Creator</h2>
             <div className="flex items-center gap-4 mb-6">
-              <img
+              <Image
                 src="/dhruv-pfp.jpg"
                 alt="Dhruv"
-                className="w-16 h-16 rounded-full border-2 border-primary/20"
+                width={64}
+                height={64}
+                className="rounded-full border-2 border-primary/20"
               />
               <p className="text-muted-foreground leading-relaxed">
                 Project Tatva is created and maintained by{" "}
@@ -173,9 +176,11 @@ export default function PrefacePage() {
             {/* Creator Image */}
             <div className="flex justify-center mb-10">
               <div className="relative w-full max-w-sm rounded-xl overflow-hidden shadow-lg border border-border/50">
-                <img
+                <Image
                   src="/dj-preface.png"
                   alt="Dhruv at work"
+                  width={512}
+                  height={384}
                   className="w-full h-auto object-cover"
                 />
               </div>

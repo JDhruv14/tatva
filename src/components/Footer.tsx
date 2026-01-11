@@ -1,15 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { forwardRef } from "react";
-import { Linkedin, Coffee } from "lucide-react";
+import { Linkedin, Coffee, Github } from "lucide-react";
 import { AvatarCircles } from "@/components/ui/avatar-circles";
 
 const Footer = forwardRef<HTMLElement>((props, ref) => {
   return (
     <footer
       ref={ref}
-      className="relative mt-20 border-t"
+      className="relative mt-8 border-t"
       style={{
         borderColor: 'hsl(var(--accent) / 0.5)'
       }}
@@ -21,10 +22,12 @@ const Footer = forwardRef<HTMLElement>((props, ref) => {
           {/* Branding Column */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 mb-3 hover:opacity-80 transition-opacity">
-              <img
+              <Image
                 src="/favicon.ico"
                 alt="Tatva"
-                className="h-8 w-8 object-contain cursor-pointer"
+                width={32}
+                height={32}
+                className="object-contain cursor-pointer"
               />
               <span
                 className="text-xl md:text-2xl font-bold font-sanskrit text-foreground transition-colors duration-300 cursor-pointer hover:text-primary dark:hover:text-accent"
@@ -78,6 +81,17 @@ const Footer = forwardRef<HTMLElement>((props, ref) => {
                   >
                     <Linkedin className="h-[14px] w-[14px] shrink-0" />
                     <span>LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/JDhruv14/tatva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary dark:hover:text-accent transition-colors font-english"
+                  >
+                    <Github className="h-[14px] w-[14px] shrink-0" />
+                    <span>GitHub</span>
                   </a>
                 </li>
               </ul>

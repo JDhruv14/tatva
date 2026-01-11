@@ -6,42 +6,60 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/_next/"],
-      },
-      {
         userAgent: [
           "GPTBot",
           "ChatGPT-User",
           "CCBot",
-          "AnthropicAI",
+          "anthropic-ai",
+          "ClaudeBot",
+          "Claude-Web",
           "Google-Extended",
           "Bytespider",
-          "ClaudeBot",
           "FacebookBot",
           "magpie-crawler",
+          "Omgilibot",
+          "Diffbot",
+          "PetalBot",
+          "SemrushBot",
+          "AhrefsBot",
+          "MJ12bot",
+          "DotBot",
+          "BLEXBot",
         ],
         disallow: "/",
       },
+      // Allow Google and its services
       {
-        userAgent: "Googlebot",
+        userAgent: ["Googlebot", "Googlebot-Image", "Googlebot-News", "Googlebot-Video", "GoogleOther", "Google-InspectionTool", "Storebot-Google"],
+        allow: "/",
+        disallow: ["/api/", "/_next/"],
+      },
+      // Allow Bing and Microsoft crawlers
+      {
+        userAgent: ["Bingbot", "BingPreview", "msnbot"],
+        allow: "/",
+        disallow: ["/api/", "/_next/"],
+      },
+      // Allow other legitimate search engines
+      {
+        userAgent: ["DuckDuckBot", "Slurp", "Baiduspider", "YandexBot", "Applebot"],
+        allow: "/",
+        disallow: ["/api/", "/_next/"],
+      },
+      // Allow social media preview bots
+      {
+        userAgent: ["Twitterbot", "facebookexternalhit", "LinkedInBot", "WhatsApp", "TelegramBot", "Pinterest"],
         allow: "/",
       },
+      // Default rule for other bots - allow with restrictions
       {
-        userAgent: "Bingbot",
+        userAgent: "*",
         allow: "/",
-      },
-      {
-        userAgent: "Twitterbot",
-        allow: "/",
-      },
-      {
-        userAgent: "facebookexternalhit",
-        allow: "/",
+        disallow: ["/api/", "/_next/", "/private/"],
+        crawlDelay: 10,
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }
-
